@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+/* комментарий внутри css */
+* {
+  margin:0%
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-align: center;
+  /* background-color: #86a5bf;
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-attachment: scroll;
+  background-size: 10%; -- длинный вид записи
+  color: #1b2a3b;*/
+  background: #86a5bf /*no-repeat*/ top/10% url('https://i.pinimg.com/564x/8b/9e/a0/8b9ea0981fa9af01e94ac4d2a5524669.jpg') fixed; /*короткий вид*/
+  
+  
+}
+
+#knopk {
+  position: absolute;
+  background: slateblue;
+  color: white;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  position: fixed;
+}
+
+#header, #block {
+  width: 100%;
+  height: 70px;
+  text-align: center;
+  border-bottom: 4px solid silver;
+  background: #333333;
+  color: #fff;
+  line-height: 70px;
+  margin-bottom: 50px;
+  font-size: larger;
+}
+
+#main {
+  width: 50%;
+  margin-left: 10%;
+  background: #fafafa;
+  opacity: 1;
+  border: 0px solid silver;
+  padding: 20px 2.5%;
+  float: left;
+  
+}
+
+#aside {
+width: 20%;
+padding: 20px 2.5%;
+margin-right: 10%;
+background: #fafafa;
+border: 0px solid silver;
+float:left;
+}
+
+#block {
+  margin-bottom: 0;
+  margin-top: 50px;
+  border-top: 4px solid silver; ;
+  border-bottom: 0;
+  float: left;
+  /* border-radius: 40px 40px 20px 20px; -- скругляет углы блока
+  opacity: 0.9; -- устанавливает прозрачность
+  margin: auto; -- внешние отступы
+  padding: -- внутренние отступы */
+}
+
+pre {
+background-color: rgb(30, 30, 30);
+color: #fff;
+width: 100%;
+float: left;
+}
+
+.lol {
+  color: #1b374b; /* лушче всегда прописывать ;  */
+}
+
+table,ol,ul {
+  display:table;
+  margin: auto;
+}
+
+.tvar {
+  color: #FF0099; /* цвет можно прописывать 16ричным кодом */
+  text-decoration: underline;
+  text-decoration-color: #00FF66;
+}
+
+.tvar::first-letter {
+  color: #0099FF; /*  его можно прописать только с первому символу или
+  к первой строке всего абзаца использовав ::first-line
+
+  так же прописывая стиль ко всем объектам вроде <p> или <b>
+  можно указать его только для :first-of-type или :last-of-type
+
+  при p:first-of-type {text-decoration: line-through} зачеркнут на странице
+  будет и первый объект <p>, и также каждый первый объект <p> в каждом <div>.
+  то есть - если у вас на странице просто пять абзацей <p>, а также
+  три блока <div> с неким количеством абзацей <p> внутри, то зачеркнуты будут
+  первый из пяти отдельных абзацей <p> и каждый первый абзац <p> в каждом
+  из трех блоков <div>. C last-of-type то же самое по аналогии*/
+}
+
+#fik::after {
+  content: '123'; /* <-- псевдо элемент который выводится после(или до если использовать before)
+  объекта и его нельзя выделить в отличии от остального текста */
+}
+
+.lol::after {
+  content: attr(title); /* <-- также можно вывести и какой-то
+  уже укузанный атрибут данного элеменьа */
+}
+
+div b:not(:empty) {
+  color: darkred; /* обращается ко всем объектам находящихся одновременно
+  в теге div и теге b и при этом не пустые (в них есть текст) */
+}
+
+.sos {
+  font-family: "Arsenal SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: orange;
+  text-decoration: line-through;
+}
+
+.sasi {
+  color: #117dab;
+  text-decoration: none;
+}
+
+.sasi:hover { /* <-- стиль отображающийся при наведении на объект */
+  color: #456082;
+  text-decoration: underline;
+  text-decoration-color: #a3d4e7;
+  cursor: pointer;
+}
+
+.sasi:active { /* <-- стиль отображающийся при клике по объекту */
+  text-decoration: line-through;
+}
+
+.sasi:visited { /* <-- то как будет выглядеть ссылка
+  после того как её уже открывали */
+  color: black
+}
+
+input:focus { /* <-- то как будет выглядеть текст в поле
+  пока курсор находится внутри поля */
+  color: #4a5c6a
+}
+
+input.search {
+  background-color: #a3d4e7;
+  color: #a4caea
+}
+
+#ulitka {
+  font-size: 2em; /*em в отличие от пикселей изменяет размер шрифта относительно изначального, то есть 2em сделает текст в 2 раза больше*/
+  /* text-transform: -- позволяет менять регистр текста (капс или нет)
+  text-transform: capitalize -- каждое слово начинается с большой буквы
+  text-transform: lowercase -- всё в нижнем регистре
+  text-transform: uppercase -- всё в верхнем регистре (капс)
+  */
+  
+}
+
+details {
+  word-spacing: 5px; /* позволяет менять расстояние между словами */
+  letter-spacing: -3px; /* позволяет менять расстояние между символами/буквами */
+}
+
